@@ -26,5 +26,11 @@ public record WeatherData(
         Integer uv,
         @JsonProperty("gust_mph") Double gustMph,
         @JsonProperty("gust_kph") Double gustKph,
-        @JsonProperty("air_quality") AirQuality airQuality)
+        @JsonProperty("windchill_c") Double windchillC,
+        @JsonProperty("windchill_f") Double windchillF,
+        @JsonProperty("dewpoint_c") Double dewpointC,
+        @JsonProperty("dewpoint_f") Double dewpointF,
+        @JsonProperty("heatindex_c") Double heatindexC,
+        @JsonProperty("heatindex_f") Double heatindexF
+        )
 {}
