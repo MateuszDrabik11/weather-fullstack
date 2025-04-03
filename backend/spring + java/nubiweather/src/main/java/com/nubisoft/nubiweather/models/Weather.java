@@ -3,7 +3,7 @@ package com.nubisoft.nubiweather.models;
 public record Weather(String city, String country, String localtime, Double tempC, Double tempF,
                       Boolean isDay, Double windSpeedKm, Double windSpeedM,
                       Double windDegree, Double pressureHpa, Double feelsLikeC, Double feelsLikeF,
-                      WeatherCondition condition, Double humidity, Integer uv, Double cloud){
+                      WeatherCondition condition, Double humidity, Integer uv, Double cloud, String currentTime){
     public Weather(RawCurrentData data)
     {
         this(
@@ -22,7 +22,8 @@ public record Weather(String city, String country, String localtime, Double temp
                 data.current().condition(),
                 data.current().humidity(),
                 data.current().uv(),
-                data.current().cloud()
+                data.current().cloud(),
+                data.current().date()
         );
 
     }

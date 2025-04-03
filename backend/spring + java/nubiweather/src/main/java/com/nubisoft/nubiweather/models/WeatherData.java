@@ -1,10 +1,11 @@
 package com.nubisoft.nubiweather.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record WeatherData(
-        @JsonProperty("last_updated_epoch") Integer lastUpdatedEpoch,
-        @JsonProperty("last_updated") String lastUpdated,
+        @JsonAlias({"time_epoch","last_updated_epoch"}) Integer dateEpoch,
+        @JsonAlias({"time","last_updated"}) String date,
         @JsonProperty("temp_c") Double tempC,
         @JsonProperty("temp_f") Double tempF,
         @JsonProperty("is_day") Integer isDay,

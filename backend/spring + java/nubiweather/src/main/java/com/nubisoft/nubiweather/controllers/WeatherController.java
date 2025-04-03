@@ -2,6 +2,7 @@ package com.nubisoft.nubiweather.controllers;
 
 import com.nubisoft.nubiweather.models.BasicMessage;
 import com.nubisoft.nubiweather.models.RawCurrentData;
+import com.nubisoft.nubiweather.models.RawForecastData;
 import com.nubisoft.nubiweather.models.Weather;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,9 +39,9 @@ public class WeatherController {
     }
 
     @RequestMapping("/forecast-weather")
-    public BasicMessage forecastWeather() {
+    public RawForecastData forecastWeather() {
         int days = 1;
-        return new BasicMessage(this.restClient.get().uri("/forecast.json?q=Gliwice&days={"+ days + "&key=" + apiKey).retrieve().body(String.class));
+        return this.restClient.get().uri("/forecast.json?q=Gliwice&days={"+ days + "&key=" + apiKey).retrieve().body(RawForecastData.class);
     }
 
     public WeatherController() {
