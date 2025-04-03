@@ -10,7 +10,7 @@ function App() {
       </div>
       <h1>NubiWeather</h1>
       <section>
-        <h2>Here's your starting point.</h2>
+        <h2>Here&apos;s your starting point.</h2>
         <h3>Good luck! :)</h3>
       </section>
     </div>
