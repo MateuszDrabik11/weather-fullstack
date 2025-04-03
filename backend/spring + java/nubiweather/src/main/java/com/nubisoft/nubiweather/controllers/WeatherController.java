@@ -36,13 +36,19 @@ public class WeatherController {
     }
 
     @RequestMapping("/forecast-weather")
-    public Forecast forecastWeather() {
+    public List<Forecast> forecastWeather() {
         int days = 4;
-        RawForecastData data = this.restClient.get().uri("/forecast.json?q=Gliwice&days="+ days + "&key=" + apiKey).retrieve().body(RawForecastData.class);
-        if (data == null) {
-            return new Forecast();
+        RawForecastData gliwice = this.restClient.get().uri("/forecast.json?q=Gliwice&days="+ days + "&key=" + apiKey).retrieve().body(RawForecastData.class);
+        RawForecastData hamburg = this.restClient.get().uri("/forecast.json?q=Hamburg&days="+ days + "&key=" + apiKey).retrieve().body(RawForecastData.class);
+
+        if (gliwice == null || hamburg == null) {
+            return new ArrayList<>();
         }
-        return ForecastBuilder.build(data);
+        ArrayList<Forecast> forecasts = new ArrayList<>();
+        forecasts.add(ForecastBuilder.build(gliwice));
+        forecasts.add(ForecastBuilder.build(hamburg));
+        return forecasts;
+
     }
 
     public WeatherController() {
