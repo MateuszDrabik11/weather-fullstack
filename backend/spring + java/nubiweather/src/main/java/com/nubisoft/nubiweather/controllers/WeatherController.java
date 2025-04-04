@@ -48,7 +48,6 @@ public class WeatherController {
         forecasts.add(ForecastBuilder.build(gliwice));
         forecasts.add(ForecastBuilder.build(hamburg));
         return forecasts;
-
     }
 
     public WeatherController() {

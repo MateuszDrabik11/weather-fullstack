@@ -1,8 +1,4 @@
-# Backend
-## Express
-## NestJS
-## Spring Boot + Java
-## Spring Boot + Kotlin
+# Task describtion
 
 In this directory you'll find backend starters for the application. You can choose any technology you like, but we've provided couple of starters in different technologies to help get you up and running.
 
@@ -25,4 +21,7 @@ Those are basic requirements, but feel free to add more features if you like, ho
 6. Saving data in runtime or `optionally` in preferred database (we want to see how you handle data)
 7. Instructions on how to run the application (we want to see your application in action)
 8. Readme with basic information about the application and features you've implemented
-+ 9. Bonus points for testing
+9. Bonus points for testing
+
+# Instruction
+
