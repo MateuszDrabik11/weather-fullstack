@@ -1,4 +1,6 @@
 import {useEffect, useState} from "react";
+import TopBar from "./TopBar.jsx";
+import WeatherData from "./WeatherData.jsx";
 
 function App() {
 
@@ -41,14 +43,20 @@ function App() {
             setCity("Gliwice")
         }
     }
-
+    const getCityIndex = () => {
+        if (city === "Gliwice") {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
     return (
         <>
             <div className="h-screen w-screen">
-                <TopBar changeCity={changeCity} city={city} fetchedTime={"12:22"} changeUnit={changeUnit} unit={unit}/>
+                <TopBar changeCity={changeCity} city={city} fetchedTime={currentWeather[getCityIndex()]?.localtime} changeUnit={changeUnit} unit={unit}/>
                 <div className="flex justify-center flex-col gap-4 items-center">
                     <div className="grid grid-cols-4 grid-rows-3 gap-6 bg-blue-600">
-                        <WeatherData cityWeather={currentWeather[0]}></WeatherData>
+                        <WeatherData cityWeather={currentWeather[getCityIndex()]} unit={unit}></WeatherData>
                     </div>
                 </div>
             </div>
@@ -56,7 +64,5 @@ function App() {
     );
 }
 
-import TopBar from "./TopBar.jsx";
-import WeatherData from "./WeatherData.jsx";
 
 export default App;

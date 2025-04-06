@@ -12,7 +12,17 @@ function TopBar({city,changeCity,unit,changeUnit,fetchedTime}) {
       <>
           <nav className="bg-blue-600 mx-auto p-2 md:p-4 rounded-b-3xl">
                 <div className="flex items-center justify-between flex-row">
-                    <div className="basis-auto text-center md:text-left md:basis-30" >Time in selected city : {fetchedTime}</div>
+                    <div className="basis-1/2 text-center md:text-left md:basis-30" >Time in selected city : {new Date(fetchedTime).toLocaleString([],
+                            {
+                                weekday: "short",
+                                day: '2-digit',
+                                month: '2-digit',
+                                year: 'numeric',
+                                hour: '2-digit',
+                                minute: '2-digit',
+                            }
+                        )
+                        || "Loading ..."}</div>
                     <div className="basis-auto text-center md:basis-5">
                         <ToggleButton state={city} callback={changeCity}></ToggleButton>
                     </div>
