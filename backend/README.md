@@ -1,6 +1,6 @@
-# Task describtion
+# Overview
 
-In this directory you'll find backend starters for the application. You can choose any technology you like, but we've provided couple of starters in different technologies to help get you up and running.
+Backend for a web app that displays weather. It is written in Java with Spring Boot and uses https://www.weatherapi.com/ api as a raw data. It provides two endpoints as described below
 
 ## What we expect from you?
 

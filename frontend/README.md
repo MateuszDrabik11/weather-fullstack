@@ -1,9 +1,12 @@
-# Frontend
-## React
-## Svelte
-## Vue
+# Overview
 
-In this directory you'll find frontend startes for different frontend frameworks. Each starter is preconfigured with Vite and TailwindCSS. Depending on your preference, you can choose between Angular, React, Svelte or Vue and JavaScript or TypeScript versions.
+Application was written in JavaScript with React and Tailwind CSS. It provides user with realtime weather and forecast in selected city. Data is being fetched from backend. To make sure that application renders correctly on mobile and desktop responsive design was being used.
+
+- Displays a weather in a selected city (Gliwice or Hamburg)
+- Displays forecast for the next 7 days, by clicking at a forecast the hourly forecast will be shown
+- User can selected imperial or metric units to use
+
+# Requirements
 
 ## What we expect from you?
 

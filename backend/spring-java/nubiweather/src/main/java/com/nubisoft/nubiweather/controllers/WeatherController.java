@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 public class WeatherController {
 
-    @Value("${api}")
+    @Value("${API}")
     private String apiKey;
     private final RestClient restClient;
 
