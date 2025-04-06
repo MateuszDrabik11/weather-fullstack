@@ -1,7 +1,7 @@
 services:
   backend:
     environment:
-      - API=751331aff809428f9a4100329250304
+      - API=
     ports:
       - "8080:8080"
     networks:
