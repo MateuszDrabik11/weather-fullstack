@@ -7,7 +7,7 @@ Don't use this configuration in production.
 
 ## Environment Variables
 
-This application requires an **Api key** for a https://www.weatherapi.com services.
+This application requires an **Api key** for a https://www.weatherapi.com service.
 
 You can do this by creating an environmental variable in compose.yaml file in backend service under environment section.
 
