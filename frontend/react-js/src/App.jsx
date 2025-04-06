@@ -71,7 +71,7 @@ function App() {
     }
     return (
         <>
-            <div className="h-screen w-screen">
+            <div className="h-screen w-screen position-relative">
                 <div className="flex justify-center flex-col items-center">
                     <div className="flex flex-col gap-4 bg-blue-400 p-2">
                         <TopBar changeCity={changeCity} city={city} fetchedTime={currentWeather[getCityIndex()]?.localtime} changeUnit={changeUnit} unit={unit}/>

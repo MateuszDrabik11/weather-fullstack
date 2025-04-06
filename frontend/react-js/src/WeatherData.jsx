@@ -44,7 +44,7 @@ function WeatherData({cityWeather, unit}){
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                         <div className="bg-gray-100 rounded-xl p-2 text-center">
                             <div>Temperature</div>
-                            <div>Perceived temp. [{useMetric() ?"°C" : "F"}]</div>
+                            <div>Perceived temp [{useMetric() ?"°C" : "F"}]</div>
                             <div>Wind [{useMetric() ?"Kph" : "Mph"}]</div>
                         </div>
                         <div className="bg-gray-100 rounded-xl p-2 text-center">
@@ -54,7 +54,7 @@ function WeatherData({cityWeather, unit}){
                         </div>
 
                         <div className="bg-gray-100 rounded-xl p-2 text-center">
-                            <div>Atm. pressure</div>
+                            <div>Atm pressure</div>
                             <div>Cloudiness</div>
                             <div>Humidity</div>
                         </div>
