@@ -10,9 +10,9 @@ function TopBar({city,changeCity,unit,changeUnit,fetchedTime}) {
     })
     return (
       <>
-          <nav className="bg-blue-600 mx-auto p-2 md:p-4 rounded-b-3xl">
+          <nav className="bg-blue-600 p-2 md:p-4 rounded-xl">
                 <div className="flex items-center justify-between flex-row">
-                    <div className="basis-1/2 text-center md:text-left md:basis-30" >Time in selected city : {new Date(fetchedTime).toLocaleString([],
+                    <div className="basis-1/2 text-center" >{new Date(fetchedTime).toLocaleString([],
                             {
                                 weekday: "short",
                                 day: '2-digit',
@@ -23,13 +23,13 @@ function TopBar({city,changeCity,unit,changeUnit,fetchedTime}) {
                             }
                         )
                         || "Loading ..."}</div>
-                    <div className="basis-auto text-center md:basis-5">
+                    <div className="basis-auto text-center">
                         <ToggleButton state={city} callback={changeCity}></ToggleButton>
                     </div>
-                    <div className="basis-auto text-center md:basis-5">
+                    <div className="basis-auto text-center">
                         <ToggleButton state={unit} callback={changeUnit}></ToggleButton>
                     </div>
-                    <div className="md:basis-80"></div>
+                    <div className=""></div>
                 </div>
           </nav>
       </>

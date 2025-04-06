@@ -37,7 +37,7 @@ public class WeatherController {
 
     @RequestMapping("/forecast-weather")
     public List<Forecast> forecastWeather() {
-        int days = 4;
+        int days = 7;
         RawForecastData gliwice = this.restClient.get().uri("/forecast.json?q=Gliwice&days="+ days + "&key=" + apiKey).retrieve().body(RawForecastData.class);
         RawForecastData hamburg = this.restClient.get().uri("/forecast.json?q=Hamburg&days="+ days + "&key=" + apiKey).retrieve().body(RawForecastData.class);
 

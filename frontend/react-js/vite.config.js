@@ -8,7 +8,8 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 9000,
     proxy: {
-      '/realtime-weather': 'http://localhost:8080'
+      '/realtime-weather': 'http://localhost:8080',
+      '/forecast-weather': 'http://localhost:8080',
     }
   }
 })
