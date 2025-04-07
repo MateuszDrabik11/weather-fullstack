@@ -31,4 +31,8 @@ This command will:
 - Build the React frontend
 - Build the Spring Boot backend
 - Set up networking and ports
+    - Frontend : http://localhost (Port 80)
+    - Backend : http://localhost:8080
 - Launch both containers together
+
+Once the setup is complete, open your browser and navigate to http://localhost to access the frontend. The backend API will be accessible at http://localhost:8080
