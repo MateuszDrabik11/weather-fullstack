@@ -9,7 +9,7 @@ Don't use this configuration in production.
 
 This application requires an **Api key** for a https://www.weatherapi.com service.
 
-You can do this by creating an environmental variable in compose.yaml file in backend service under environment section.
+You can add your own key by creating an environmental variable in compose.yaml file in backend service under environment section.
 
 ```
 services:
