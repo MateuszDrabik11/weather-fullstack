@@ -23,5 +23,3 @@ Those are basic requirements, but feel free to add more features if you like, ho
 8. Readme with basic information about the application and features you've implemented
 9. Bonus points for testing
 
-# Instruction
-
